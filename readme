@@ -15,11 +15,6 @@ These files have been tested and used to generate a live ELK deployment on Azure
 <https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/metricbeat_config.yml>
 <https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml>
 
-
-
-
-
-
 This document contains the following details:
 
 - Description of the Topologu
@@ -33,14 +28,12 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly functional, in addition to restricting traffic to the network.  Load Balancers handle the routing of traffic from one server to another to ensure continutity of services delivery as well and provide service resiliancy against cyberthereats such as DDos attacks.  The load balancer with a jumpbox limit access to the entire network system and allow monitoring and reporting on the status of our services.
 
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat watches for log files and forwards them on to Elasticsearch/Logstash for indexing.
+- Metricbeat records metrics and statistics and forwards them on to Elasticsearch/Logstash for indexing.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
