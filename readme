@@ -13,6 +13,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 <https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/metricbeat-playbook.yml>
 <https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/filebeat_config.yml>
 <https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/metricbeat_config.yml>
+<https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml>
+
 
 
 
