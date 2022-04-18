@@ -48,13 +48,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-| Name     | Function | IP Address               | OS     |
-|----------|----------|------------a-------------|--------|
-| Jump Box | Gateway  | 20.231.227.94/10.1.0.4   | Linux  |
-| Web-1    | Server   | 20.121.87.226/10.1.0.5   | Linux  |
-| Web-2    | Server   | 20.121.87.226/10.1.0.6   | Linux  |
-| Web-3    | Server   | 20.1221.87.226/10.1.0.7  | Linux  |
-| ELKserver| Server   | 20.150.144.101/10.0.0.4  | Linux  |
+| Name       | Function  | IP Address                  | OS     |
+|-------- - -|--------- -|-----------------------------|--------|
+| Jump Box   | Gateway   | 20.231.227.94/10.1.0.4      | Linux  |
+| Web-1      | Server    | 20.121.87.226/10.1.0.5      | Linux  |
+| Web-2      | Server    | 20.121.87.226/10.1.0.6      | Linux  |
+| Web-3      | Server    | 20.1221.87.226/10.1.0.7     | Linux  |
+| ELKserver  | Server    | 20.150.144.101/10.0.0.4     | Linux  |
 
 ### Access Policies
 
