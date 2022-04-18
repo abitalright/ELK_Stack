@@ -4,18 +4,25 @@ ELK Stack with Azure
 
 The files in this repository were used to configure the network depicted below.
 
- <https://github.com/abitalright/ELK_Stack/blob/a67bdccfdef307e4978d869ffaee8ed21a4d84aa/image/Diagram/1649881891426.png>
+*[Diagram](https://github.com/abitalright/ELK_Stack/blob/a67bdccfdef307e4978d869ffaee8ed21a4d84aa/image/Diagram/1649881891426.png “Diagram”) 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configuration and playbook yml file may be used to install only certain pieces of it, such as Filebeat.
 
-<https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/Pentest.yml>
-<https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/hosts>
-<https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/elk-playbook.yml>
-<https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/filebeat-playbook.yml>
-<https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/metricbeat-playbook.yml>
-<https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/filebeat_config.yml>
-<https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/metricbeat_config.yml>
-<https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml>
+*[Pentest.yml](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/Pentest.yml “Pentest.yml”) 
+
+*[Hosts](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/hosts “Hosts”) 
+
+*[Elk-Playbook](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/elk-playbook.yml “Elk-Playbook”) 
+
+*[Filebeat-Playbook](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/filebeat-playbook.yml “Filebeat-Playbook.yml”) 
+
+*[Metricbeat-Playbook](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/metricbeat-playbook.yml “Metricbeat-Playbook.yml”) 
+
+*[Filebeat-Config](https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/filebeat_config.yml ”Filebeat-Config.yml”) 
+
+*[Metricbeat-Config](https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/metricbeat_config.yml “Metribear-Config.yml”) 
+
+*[Ansible-Config](https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml “Ansible-Config.yml")
 
 This document contains the following details:
 
