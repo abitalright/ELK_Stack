@@ -31,8 +31,8 @@ This document contains the following details:
 - Description of the Topologu
 - Access Policies
 - ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
+- Beats in Use
+- Machines Being Monitored
 - How to Use the Ansible Build
 
 ### Description of the Topology
@@ -48,21 +48,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 The configuration details of each machine may be found below.
 
-
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
-
 | Name     | Function | IP Address               | OS     |
-
 |----------|----------|------------a-------------|--------|
-
 | Jump Box | Gateway  | 20.231.227.94/10.1.0.4   | Linux  |
-
 | Web-1    | Server   | 20.121.87.226/10.1.0.5   | Linux  |
-
 | Web-2    | Server   | 20.121.87.226/10.1.0.6   | Linux  |
-
 | Web-3    | Server   | 20.1221.87.226/10.1.0.7  | Linux  |
-
 | ELKserver| Server   | 20.150.144.101/10.0.0.4  | Linux  |
 
 ### Access Policies
@@ -71,27 +62,21 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the JumpBox_Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-- "`<myworkstations>`" PIP via TCP 5601
+- "<myworkstations>" PIP via TCP 5601
 
-Machines within the network can only be accessed by "`<myworkstation>`" and JumpBox_Provisioner via SSH/Jumpbox_Provisioner.
+Machines within the network can only be accessed by "<myworkstation>" and JumpBox_Provisioner via SSH/Jumpbox_Provisioner.
 
-- The ELK machine is accessable from the JumpBox_Provisioner's at 10.1.0.4 via SSH 22. Its IP address is "`<myworkstation>`"Public IP via TCP 5601
+- The ELK machine is accessable from the JumpBox_Provisioner's at 10.1.0.4 via SSH 22. Its IP address is "<myworkstation>"Public IP via TCP 5601
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible |              Allowed IP Addresses                  |
-
 |----------|---------------------|----------------------------------------------------|
-
-| Jump Box |Yes                  | 20.231.227.94 ( "`<myworkstation>`"PubIP via SSH 22)|
-
-| Web-1    |No                   |  10.1.0.4 SSH 22                                   |
-
+| Jump Box |Yes                  | 20.231.227.94 ("<myworkstation>" PubIP via SSH 22) |
+| Web-1    |No                   | 10.1.0.4 SSH 22                                    |
 | Web-2    |No                   | 10.1.0.4 SSH 22                                    |
-
 | Web-3    |No                   | 10.1.0.4 SSH 22                                    |
-
-| ELKserver|No                   | "`<myworkstation>`"PubIP via TCP 5601               |
+| ELKserver|No                   | "<myworkstation>"  PubIP via TCP 5601              |
 
 ### Elk Configuration
 
@@ -113,25 +98,22 @@ The playbook implements the following tasks:
 
 *Ports to publish on
 
-- .
-
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ElKServer
 
 JumpBox Provisioner
 
-Web-1
+| Web-1        | 10.1.0.5      
+| Web-2        | 10.1.0.6      
+| Web-3 (DVWA) | 10.1.0.7   
 
-Web-2
-
-Web-3(DVWA)
 
 ### Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
 
--Web-1 -
+-Web-1 - 
 
 -Web-2 -
 
@@ -139,12 +121,11 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 
-- Data Successful - Filebeat
-- Data Successful - Metricbeat
+- Data Successful - Filebeat (see PNG)
+- Data Successful - Metricbeat (see PNG)
 
 These Beats allow us to collect the following information from each machine:
-
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+-one collects logs and one collects metrics/performance
 
 ### Using the Playbook
 
@@ -161,4 +142,3 @@ SSH into the control node and follow the steps below:
 - DO the same for the Metricbeat-Playbook and Metricbeat-Playbook (use port 9200)
 - http://xx.xx.xxx.xxx:5601//app/kibana to check that the Elk server is running.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
