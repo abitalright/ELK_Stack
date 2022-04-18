@@ -1,28 +1,30 @@
 # ELK_Stack
+
 ELK Stack with Azure
+
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-*[Diagram](https://github.com/abitalright/ELK_Stack/blob/a67bdccfdef307e4978d869ffaee8ed21a4d84aa/image/Diagram/1649881891426.png “Diagram”) 
+*[Diagram]([Diagram]()) 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the configuration and playbook yml file may be used to install only certain pieces of it, such as Filebeat.
 
-*[Pentest.yml](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/Pentest.yml “Pentest.yml”) 
+*[Pentest]()
 
-*[Hosts](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/hosts “Hosts”) 
+*[HOSTS]()
 
-*[Elk-Playbook](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/elk-playbook.yml “Elk-Playbook”) 
+*[ELK-Playbook]()
 
-*[Filebeat-Playbook](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/filebeat-playbook.yml “Filebeat-Playbook.yml”) 
+*[Filebeat-Playbook]()
 
-*[Metricbeat-Playbook](https://github.com/abitalright/ELK_Stack/blob/5cbf8d08b93aabd0a05186b876b50996b709b496/metricbeat-playbook.yml “Metricbeat-Playbook.yml”) 
+*[Metricbeat-Playbook]() 
 
-*[Filebeat-Config](https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/filebeat_config.yml ”Filebeat-Config.yml”) 
+*[Filebeat-Config]()”
 
-*[Metricbeat-Config](https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/metricbeat_config.yml “Metribear-Config.yml”) 
+*[Metricbeat-Config]()
 
-*[Ansible-Config](https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml “Ansible-Config.yml")
+*[Ansible-Config]()
 
 This document contains the following details:
 
@@ -45,3 +47,118 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat records metrics and statistics and forwards them on to Elasticsearch/Logstash for indexing.
 
 The configuration details of each machine may be found below.
+
+
+_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
+| Name     | Function | IP Address               | OS     |
+
+|----------|----------|------------a-------------|--------|
+
+| Jump Box | Gateway  | 20.231.227.94/10.1.0.4   | Linux  |
+
+| Web-1    | Server   | 20.121.87.226/10.1.0.5   | Linux  |
+
+| Web-2    | Server   | 20.121.87.226/10.1.0.6   | Linux  |
+
+| Web-3    | Server   | 20.1221.87.226/10.1.0.7  | Linux  |
+
+| ELKserver| Server   | 20.150.144.101/10.0.0.4  | Linux  |
+
+### Access Policies
+
+The machines on the internal network are not exposed to the public Internet.
+
+Only the JumpBox_Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+
+- "`<myworkstations>`" PIP via TCP 5601
+
+Machines within the network can only be accessed by "`<myworkstation>`" and JumpBox_Provisioner via SSH/Jumpbox_Provisioner.
+
+- The ELK machine is accessable from the JumpBox_Provisioner's at 10.1.0.4 via SSH 22. Its IP address is "`<myworkstation>`"Public IP via TCP 5601
+
+A summary of the access policies in place can be found in the table below.
+
+| Name     | Publicly Accessible |              Allowed IP Addresses                  |
+
+|----------|---------------------|----------------------------------------------------|
+
+| Jump Box |Yes                  | 20.231.227.94 ( "`<myworkstation>`"PubIP via SSH 22)|
+
+| Web-1    |No                   |  10.1.0.4 SSH 22                                   |
+
+| Web-2    |No                   | 10.1.0.4 SSH 22                                    |
+
+| Web-3    |No                   | 10.1.0.4 SSH 22                                    |
+
+| ELKserver|No                   | "`<myworkstation>`"PubIP via TCP 5601               |
+
+### Elk Configuration
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+
+- Automating configurations with Ansible makes deploying systems uniformed, reducing error, the need to spend time creating new custom code     and imporoving efficency.
+
+The playbook implements the following tasks:
+
+*Direct to machine
+
+*Install Docker.io
+
+*Install python3-pip
+
+*Increase Virtual Memory
+
+*Download and Launch Containers
+
+*Ports to publish on
+
+- .
+
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+
+ElKServer
+
+JumpBox Provisioner
+
+Web-1
+
+Web-2
+
+Web-3(DVWA)
+
+### Target Machines & Beats
+
+This ELK server is configured to monitor the following machines:
+
+-Web-1 -
+
+-Web-2 -
+
+-Web-3(DVWA) -
+
+We have installed the following Beats on these machines:
+
+- Data Successful - Filebeat
+- Data Successful - Metricbeat
+
+These Beats allow us to collect the following information from each machine:
+
+- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+### Using the Playbook
+
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+
+SSH into the control node and follow the steps below:
+
+- Copy the .yml file to the ansible folder.
+- Update the config file to include remote user name and ports
+- Run the playbook, and navigate to Kibana:5601 to check that the installation worked as expected.
+- Download the Filebeat playbook with curl -L -O to the /etc/ansible/filebeat-config.yml
+- Update the filebeat-config.yml to include the ELK server private IP address from the ansible container.
+- run the playbook with "Ansible-Playbook Filebeat-Playbook.yml"
+- DO the same for the Metricbeat-Playbook and Metricbeat-Playbook (use port 9200)
+- http://xx.xx.xxx.xxx:5601//app/kibana to check that the Elk server is running.
+
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
