@@ -22,7 +22,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 *[Metricbeat-Config](https://github.com/abitalright/ELK_Stack/blob/5ccdcadd407af12b43df1aee1cf0e14010834c37/metricbeat_config.yml “Metribear-Config.yml”) 
 
-*[Ansible-Config](https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml “Ansible-Config.yml”) 
+*[Ansible-Config](https://github.com/abitalright/ELK_Stack/blob/e8449e6ea23da614509c0b864d75fb35ea285ca7/ansible_config.yml “Ansible-Config.yml")
 
 This document contains the following details:
 
